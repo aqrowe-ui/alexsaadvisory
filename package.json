@@ -1,0 +1,12 @@
+{
+  "name": "alexsaadvisory",
+  "version": "1.0.0",
+  "description": "ALEXSA Advisory — Expert Advisory · Digital Protection · One Subscription",
+  "private": true,
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

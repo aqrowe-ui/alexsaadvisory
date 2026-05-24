@@ -1,0 +1,19 @@
+# ALEXSA Advisory — Netlify Configuration
+# This file tells Netlify where your functions live and maps /api/chat to your serverless function.
+
+[build]
+  functions = "netlify/functions"
+  publish   = "."
+
+# Redirect /api/chat → your serverless function
+# Your site calls /api/chat and Netlify handles the rest securely
+[[redirects]]
+  from   = "/api/chat"
+  to     = "/.netlify/functions/chat"
+  status = 200
+
+# Redirect all 404s back to index.html (good practice for single-page sites)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
